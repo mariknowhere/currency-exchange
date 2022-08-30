@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Currency Exchange</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <img src="images/background.png" alt="background" class="main-background">
+  <div class="main-header">
+    <div class="main main-header-container">
+      <div class="main-header-links">
+        <img src="images/logo.svg" alt="logo" class="main-header-logo">
+        <a href="#" class="main-header-link">Как мы работаем</a>
+        <button class="main-header-button">Почему мы</button>
+        <a href="#" class="main-header-link">Контакты</a>
+      </div>
+      <div class="main-email-wrapper">
+        <img src="images/email.svg" alt="email" class="main-header-email-image">
+        <span class="main-header-email-text">obmen.uno@mail.ru</span>
+      </div>
+    </div>
+  </div>
+  <div class="main main-block">
+    <div class="main-block-cards">
+      <div class="main-block-card">
+        <h2 class="main-block-card-title">Отдаете</h2>
+        <div class="main-block-input-wrapper">
+          <input id="rub" type="number" class="main-block-input" placeholder="10000">
+          <label for="rub" class="main-block-label">RUB</label>
+        </div>
+        <span class="main-block-description">От <span class="main-block-description-secondary">500 руб</span></span>
+        <button class="main-block-button">
+          <img src="images/sber.png" alt="sber" class="main-button-logo">
+          <span class="main-block-button-text">СберОнлайн RUB</span>
+          <img src="images/arrow_down.svg" alt="arrow" class="main-block-button-arrow">
+        </button>
+        <span class="main-block-text">Курс покупки 10.9 руб = 1 cny</span>
+      </div>
+      <img src="images/exchange.svg" alt="exchange" class="main-block-exchange">
+      <div class="main-block-card">
+        <h2 class="main-block-card-title">Получаете</h2>
+        <div class="main-block-input-wrapper">
+          <input id="cny" type="number" class="main-block-input" placeholder="882">
+          <label for="cny" class="main-block-label">CNY</label>
+        </div>
+        <span class="main-block-description">От <span class="main-block-description-secondary">50 Cny</span></span>
+        <button class="main-block-button">
+          <img src="images/alipay.png" alt="alipay" class="main-button-logo">
+          <span class="main-block-button-text">Alipay CNY</span>
+          <img src="images/arrow_down.svg" alt="arrow" class="main-block-button-arrow">
+        </button>
+        <span class="main-block-text">Курс продажи 8.9 руб = 1 cny</span>
+      </div>
+      <div class="main-block-card">
+        <h2 class="main-block-card-title main-block-card-last-title">Ввод данных</h2>
+        <span class="main-block-card-topic">Обмен по курсу 8.9 руб = 1 cny</span>
+        <div class="main-block-info">
+          <div class="main-block-info-item">
+            <input class="main-block-info-item-price" id="rub_text" placeholder="10000 руб"/>
+            <span class="main-block-info-item-bank">СберОнлайн RUB</span>
+          </div>
+          <div class="main-block-info-images">
+            <img src="images/sber.png" alt="sber" class="main-block-info-image">
+            <img src="images/alipay.png" alt="alipay" class="main-block-info-image">
+          </div>
+          <div class="main-block-info-item">
+            <input class="main-block-info-item-price" id="cny_text" placeholder="882 cny">
+            <span class="main-block-info-item-bank">Alipay CNY</span>
+          </div>
+        </div>
+        <div>
+          <div class="main-block-card-input-wrapper">
+            <input
+              type="email"
+              placeholder="Ваш Email"
+              class="main-block-input"
+            >
+          </div>
+          <div class="main-block-card-input-wrapper">
+            <input
+              type="number"
+              placeholder="Номер телефона(ватсап, вичат)"
+              class="main-block-input"
+            >
+          </div>
+          <div class="main-block-card-input-wrapper">
+            <input type="number" placeholder="Номер карты" class="main-block-input">
+          </div>
+          <div class="main-block-card-input-wrapper">
+            <input type="text" placeholder="Имя получателя" class="main-block-input">
+          </div>
+        </div>
+        <button class="main-block-card-button">Оставить заявку</button>
+        <span class="main-block-card-bottom-text">
+          Нажимая на кнопку “Перейти к оплате” вы соглашаетесь с
+          <span class="main-block-description-secondary">
+            правилами обмена
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="main-block-bottom">
+      <a href="#" class="main-block-bottom-text">Пользовательское соглашение</a>
+      <a href="#" class="main-block-bottom-text">Политика конфиденциальности</a>
+    </div>
+  </div>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

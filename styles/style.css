@@ -1,0 +1,374 @@
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 300;
+  font-style: normal;
+  src:  local("Futura PT Light"),
+        local("FuturaPT-Light"),
+        url("../fonts/FuturaPT-Light.woff2") format('woff2'),
+        url("../fonts/FuturaPT-Light.woff") format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 400;
+  font-style: normal;
+  src:  local("Futura PT Book"),
+  local("FuturaPT-Book"),
+  url("../fonts/FuturaPT-Book.woff2") format('woff2'),
+  url("../fonts/FuturaPT-Book.woff") format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 500;
+  font-style: normal;
+  src:  local("Futura PT Medium"),
+  local("FuturaPT-Book"),
+  url("../fonts/FuturaPT-Medium.woff2") format('woff2'),
+  url("../fonts/FuturaPT-Medium.woff") format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Futura PT";
+  font-weight: 700;
+  font-style: normal;
+  src:  local("Futura PT Bold"),
+  local("FuturaPT-Bold"),
+  url("../fonts/FuturaPT-Bold.woff2") format('woff2'),
+  url("../fonts/FuturaPT-Bold.woff") format('woff');
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(79.01deg, #7C5CFF 2.95%, #D355FF 111.17%);
+  font-family: "Futura PT", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.main {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.main-background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.main-header {
+  position: relative;
+  background: rgba(15, 0, 74, 0.7);
+}
+
+.main-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 35px;
+}
+
+.main-header-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-header-logo {
+  cursor: pointer;
+  margin-right: 35px;
+}
+
+.main-header-link {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  color: #FFFFFF;
+  margin-right: 35px;
+}
+
+.main-header-button {
+  font-family: "Futura PT", sans-serif;
+  cursor: pointer;
+  padding: 10px 25px;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 33px;
+  border: 0;
+  background: rgba(112, 78, 245, 0.38);
+  border-radius: 4px;
+  color: white;
+  margin-right: 35px;
+}
+
+.main-email-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-header-email-image {
+  margin-right: 12px;
+}
+
+.main-header-email-text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33px;
+  color: white;
+}
+
+.main-block {
+  position: absolute;
+  width: 100%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-block-cards {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+
+.main-block-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+  height: 100vh;
+  max-height: 450px;
+  background: white;
+  padding: 25px 48px 25px 40px;
+  box-shadow: inset 0 0 10px rgba(137, 137, 137, 0.53);
+  border-radius: 25px;
+}
+
+.main-block-card-title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  color: #404040;
+  margin-bottom: 15px;
+}
+
+.main-block-input-wrapper {
+  position: relative;
+  display: flex;
+}
+
+.main-block-input {
+  font-family: "Futura PT", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  color: #404040;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #F3F3F3;;
+}
+
+.main-block-label {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+  color: #404040;
+}
+
+.main-block-description {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 13px;
+  color: #404040;
+  margin: 7px 0 15px;
+}
+
+.main-block-description-secondary {
+  margin-left: 4px;
+  text-decoration: underline;
+}
+
+.main-block-button {
+  font-family: "Futura PT", sans-serif;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border: 0;
+  background: #F3F3F3;
+  border-radius: 7px;
+  margin-bottom: 20px;
+}
+
+.main-block-button-text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #404040;
+}
+
+.main-block-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  color: #404040;
+}
+
+.main-block-exchange {
+  cursor: pointer;
+  position: absolute;
+  top: 145px;
+  left: 320px;
+}
+
+.main-block-card-last-title {
+  margin: 0;
+}
+
+.main-block-card-topic {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  color: #404040;
+  margin-bottom: 12px;
+}
+
+.main-block-card-input-wrapper {
+  margin-bottom: 22px;
+}
+
+.main-block-card-input-wrapper:last-child {
+  margin-bottom: 18px;
+}
+
+.main-block-card-button {
+  font-family: "Futura PT", sans-serif;
+  padding: 15px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+  background: #885CFF;
+  border: 0;
+  border-radius: 7px;
+  margin-bottom: 12px;
+}
+
+.main-block-card-bottom-text {
+  font-weight: 300;
+  font-size: 14px;
+  text-align: center;
+  line-height: 13px;
+  color: #404040;
+}
+
+.main-block-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 64px;
+}
+
+.main-block-bottom-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+}
+
+.main-block-bottom-text:first-child {
+  margin-right: 40px;
+}
+
+.main-block-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 22px;
+  background: #F3F3F3;
+  border-radius: 7px;
+  margin-bottom: 11px;
+}
+
+.main-block-info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-block-info-item-price {
+  background: transparent;
+  max-width: 110px;
+  border: 0;
+  font-weight: 300;
+  pointer-events: none;
+  font-size: 16px;
+  line-height: 21px;
+  color: #404040;
+}
+
+.main-block-info-item-price::placeholder {
+  color: #404040;
+}
+
+.main-block-input::placeholder {
+  color: #404040;
+}
+
+.main-block-info-item-bank {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 13px;
+  color: #404040;
+}
+
+.main-block-info-images {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.main-block-info-image {
+  height: fit-content;
+}
+
+.main-block-input-danger {
+  border-bottom: 2px solid red;
+}
